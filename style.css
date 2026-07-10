@@ -1564,3 +1564,11 @@ footer {
   }
 
 }
+@media (max-width: 768px) {
+
+  .hero-bg {
+    background-position: center center;
+    background-size: auto 100%;
+  }
+
+}
