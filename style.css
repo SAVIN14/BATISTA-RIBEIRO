@@ -1507,10 +1507,60 @@ footer {
   height: 360px;
 }
 
+/* FOTO DOS ADVOGADOS - DESKTOP */
+.lawyer-img-wrap {
+  flex: 0 0 33%;
+  height: 500px;
+  background: #bbbbca;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .lawyer-img-wrap img {
   width: 100%;
   height: 100%;
-  max-height: none;
   object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+
+/* Ajuste para fotos verticais */
+.lawyer-img-wrap img[src*="lucas"],
+.lawyer-img-wrap img[src*="paulo"] {
   object-position: center top;
+}
+
+
+/* Tablet */
+@media (max-width:900px){
+
+  .lawyer-img-wrap {
+    height:480px;
+    width:100%;
+  }
+
+  .lawyer-img-wrap img {
+    object-fit:cover;
+    object-position:center top;
+  }
+
+}
+
+
+/* Celular */
+@media(max-width:480px){
+
+  .lawyer-img-wrap {
+    height:420px;
+  }
+
+  .lawyer-img-wrap img {
+    object-fit:cover;
+    object-position:center top;
+  }
+
 }
