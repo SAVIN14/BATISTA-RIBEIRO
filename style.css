@@ -1564,10 +1564,20 @@ footer {
   }
 
 }
+/* Ajuste da imagem de fundo do Hero */
+.hero-bg {
+  background-position: center center;
+  background-size: cover;
+}
+
+
+/* Celular */
 @media (max-width: 768px) {
 
   .hero-bg {
-    background-position: center center;
+    height: 100%;
+    top: 0;
+    background-position: center top;
     background-size: auto 100%;
   }
 
