@@ -1342,24 +1342,28 @@ footer {
 }
 
 @media (max-width: 900px) {
-  /* Lawyers grid display wrap */
+
   .lawyer-card-inner {
     flex-direction: column;
   }
-  
+
   .lawyer-img-wrap {
     width: 100%;
+    height: 480px;
+    padding: 0;
     border-right: none;
     border-bottom: 1px solid var(--border);
-    padding: 30px 0;
-    height: 480px; /* Increased for larger photos */
   }
-  
-  .lawyer-img-wrap img {
-    max-height: 420px; /* Increased for larger photos */
-  }
-}
 
+  .lawyer-img-wrap img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+}
 @media (max-width: 768px) {
   section {
     padding: 80px 0;
@@ -1458,14 +1462,18 @@ footer {
     right: 18px;
   }
   
-  .lawyer-img-wrap {
-    height: 400px; /* Increased for larger photos */
-  }
-  
-  .lawyer-img-wrap img {
-    max-height: 350px; /* Increased for larger photos */
-  }
-  
+ .lawyer-img-wrap {
+    height: 420px;
+    padding: 0;
+}
+
+.lawyer-img-wrap img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center top;
+}
   .lawyer-info {
     padding: 32px 24px;
   }
@@ -1495,20 +1503,14 @@ footer {
   }
 }
 
-@media (max-width: 360px) {
-  .logo-name {
-    font-size: 1rem;
-  }
-  
-  .hero h1 {
-    font-size: 2.1rem;
-  }
-  
-  .lawyer-img-wrap {
-    height: 320px; /* Increased for larger photos */
-  }
-  
-  .lawyer-img-wrap img {
-    max-height: 280px; /* Increased for larger photos */
-  }
+.lawyer-img-wrap {
+  height: 360px;
+}
+
+.lawyer-img-wrap img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center top;
 }
